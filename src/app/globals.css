@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f7fbff;
+  --bg-soft: #eef7ff;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: #ffffff;
+  --line: rgba(112, 162, 255, 0.18);
+  --line-strong: rgba(93, 145, 234, 0.3);
+  --text: #1e2a3b;
+  --text-soft: #5f7088;
+  --accent: #66a6ff;
+  --accent-strong: #4285f4;
+  --accent-mint: #8ce1c5;
+  --accent-pink: #ff9db3;
+  --accent-yellow: #ffd96b;
+  --shadow-lg: 0 24px 80px rgba(91, 126, 191, 0.16);
+  --shadow-md: 0 16px 44px rgba(91, 126, 191, 0.14);
+  --radius-xl: 32px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-background-soft: var(--bg-soft);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--text);
+  --color-ink-soft: var(--text-soft);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-mint: var(--accent-mint);
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-yellow: var(--accent-yellow);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(148, 198, 255, 0.4), transparent 30%),
+    radial-gradient(circle at 85% 12%, rgba(255, 190, 214, 0.28), transparent 24%),
+    linear-gradient(180deg, #fcfeff 0%, #f4f9ff 50%, #f8fcff 100%);
+  font-family: var(--font-body), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(102, 166, 255, 0.24);
+}
+
+.glass-panel {
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+}
+
+.section-shell {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.66);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-md);
+}
+
+.grid-ambient {
+  background-image:
+    linear-gradient(rgba(126, 168, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(126, 168, 255, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.note-body {
+  display: grid;
+  gap: 1rem;
+  color: var(--text);
+  line-height: 1.85;
+}
+
+.note-body h1,
+.note-body h2,
+.note-body h3 {
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.note-body h1 {
+  font-size: 2rem;
+}
+
+.note-body h2 {
+  font-size: 1.5rem;
+}
+
+.note-body p,
+.note-body li {
+  color: var(--text-soft);
+}
+
+.note-body ul {
+  padding-left: 1.3rem;
+}
+
+.note-body img {
+  border-radius: 1.5rem;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+}
+
+.note-body blockquote {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 1rem 1rem 0;
+  background: rgba(102, 166, 255, 0.08);
+  color: var(--text);
+}
