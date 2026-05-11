@@ -10,7 +10,7 @@ import { SiteShell } from "@/components/layout/site-shell";
 export default function HomePage() {
   return (
     <SiteShell>
-      <Container className="space-y-12 py-10 sm:py-14">
+      <Container className="space-y-14 py-10 sm:py-14">
         <HeroSection />
         <IntroSection />
         <ProjectsSection />
