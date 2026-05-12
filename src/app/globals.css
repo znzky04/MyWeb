@@ -179,6 +179,63 @@ img {
     radial-gradient(circle at 50% 88%, rgba(217, 255, 236, 0.22), transparent 22%);
 }
 
+.notes-cosmos {
+  background:
+    radial-gradient(circle at 20% 16%, rgba(129, 181, 255, 0.28), transparent 20%),
+    radial-gradient(circle at 78% 18%, rgba(255, 154, 210, 0.24), transparent 18%),
+    radial-gradient(circle at 52% 78%, rgba(115, 255, 228, 0.16), transparent 18%),
+    linear-gradient(180deg, rgba(9, 13, 26, 0.96) 0%, rgba(14, 18, 34, 0.96) 54%, rgba(18, 24, 44, 0.94) 100%);
+}
+
+.notes-panel {
+  border: 1px solid rgba(154, 176, 255, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03)),
+    rgba(10, 14, 28, 0.82);
+  backdrop-filter: blur(22px);
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.notes-panel::before {
+  background: linear-gradient(
+    135deg,
+    rgba(120, 182, 255, 0.44) 0%,
+    rgba(189, 145, 255, 0.2) 28%,
+    rgba(255, 255, 255, 0.04) 52%,
+    rgba(107, 255, 224, 0.18) 76%,
+    rgba(255, 170, 214, 0.34) 100%
+  );
+}
+
+.notes-grid {
+  background-image:
+    linear-gradient(rgba(130, 155, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(130, 155, 255, 0.08) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.holo-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.holo-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(137, 170, 204, 0.5), transparent);
+  transform: translateX(-100%);
+  animation: holo-sweep 5.8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes holo-sweep {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
 .ambient-mask {
   mask-image: linear-gradient(to bottom, black 86%, transparent 100%);
 }
