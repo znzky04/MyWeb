@@ -18,7 +18,7 @@ export const notesCategories: NotesCategory[] = [
     roomLabel: "晨光房间",
     roomCode: "ROOM-01",
     signal: "soft archive",
-    atmosphere: "适合存放日常情绪、碎碎念和会让你以后想回头看的微小片段。",
+    atmosphere: "适合存放日常情绪、碎碎念和那些以后会想回头看的微小片段。",
   },
   {
     key: "study",

@@ -1,13 +1,51 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, Sparkles, X } from "lucide-react";
 import { navItems } from "@/lib/site-config";
 import { Container } from "@/components/layout/container";
 
+type HomeHeaderLocale = "zh" | "en";
+
+const STORAGE_KEY = "home-locale";
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [homeLocale, setHomeLocale] = useState<HomeHeaderLocale>("zh");
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  useEffect(() => {
+    const syncLocale = () => {
+      const saved = window.localStorage.getItem(STORAGE_KEY);
+      setHomeLocale(saved === "en" ? "en" : "zh");
+    };
+
+    syncLocale();
+    window.addEventListener("storage", syncLocale);
+    window.addEventListener("home-locale-change", syncLocale);
+    return () => {
+      window.removeEventListener("storage", syncLocale);
+      window.removeEventListener("home-locale-change", syncLocale);
+    };
+  }, []);
+
+  const currentNavItems = useMemo(() => {
+    if (!isHome || homeLocale === "zh") {
+      return navItems;
+    }
+
+    return [
+      { label: "Home", href: "/" },
+      { label: "Projects", href: "/projects" },
+      { label: "About", href: "/about" },
+      { label: "Notes", href: "/notes" },
+    ];
+  }, [homeLocale, isHome]);
+
+  const notesButtonLabel = isHome && homeLocale === "en" ? "Open notes space" : "进入记录空间";
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 pt-4 sm:pt-5">
@@ -18,7 +56,7 @@ export function SiteHeader() {
           </Link>
 
           <nav className="ml-4 hidden items-center gap-5 md:flex">
-            {navItems.map((item, index) => (
+            {currentNavItems.map((item, index) => (
               <Link key={item.href} href={item.href} className="flex items-center gap-2 rounded-full px-3 py-2 font-medium text-ink-soft transition hover:bg-white/45 hover:text-ink">
                 {index === 0 ? <Sparkles className="h-3.5 w-3.5" strokeWidth={1.5} /> : null}
                 {item.label}
@@ -31,7 +69,7 @@ export function SiteHeader() {
               href="/notes"
               className="hidden rounded-full bg-[#121b2f] px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_28px_rgba(17,23,38,0.28)] transition hover:-translate-y-0.5 sm:inline-flex"
             >
-              进入记录空间
+              {notesButtonLabel}
             </Link>
 
             <button
@@ -48,7 +86,7 @@ export function SiteHeader() {
         {open ? (
           <div className="liquid-glass absolute left-5 right-5 top-[calc(100%+10px)] rounded-[28px] border border-white/55 p-3 shadow-[var(--shadow-lg)] md:hidden">
             <div className="grid gap-2">
-              {navItems.map((item) => (
+              {currentNavItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

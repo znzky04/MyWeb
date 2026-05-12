@@ -1,18 +1,18 @@
-import { projectsContent } from "@/content/projects";
+import { HomeLocale, homeContent } from "@/content/home-content";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { ProjectCard } from "@/components/ui/project-card";
 
-export function ProjectsSection() {
+export function ProjectsSection({ copy }: { copy: (typeof homeContent)[HomeLocale] }) {
   return (
     <section className="space-y-8">
       <SectionHeading
-        eyebrow="Selected projects"
-        title="先展示最能代表自己的几块内容。"
-        description="这一版先把项目展示做成清晰、轻盈、可继续扩展的结构，后面你可以慢慢把真正重要的作品填进来。"
+        eyebrow={copy.projects.eyebrow}
+        title={copy.projects.title}
+        description={copy.projects.description}
       />
 
       <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr_0.9fr]">
-        {projectsContent.map((project) => (
+        {copy.projects.items.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
       </div>
