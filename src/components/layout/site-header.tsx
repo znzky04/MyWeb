@@ -1,36 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, Sparkles, X } from "lucide-react";
 import { navItems } from "@/lib/site-config";
 import { Container } from "@/components/layout/container";
+import { HomeLocale } from "@/content/home-content";
 
-type HomeHeaderLocale = "zh" | "en";
-
-const STORAGE_KEY = "home-locale";
-
-export function SiteHeader() {
+export function SiteHeader({ homeLocale = "zh" }: { homeLocale?: HomeLocale }) {
   const [open, setOpen] = useState(false);
-  const [homeLocale, setHomeLocale] = useState<HomeHeaderLocale>("zh");
   const pathname = usePathname();
   const isHome = pathname === "/";
-
-  useEffect(() => {
-    const syncLocale = () => {
-      const saved = window.localStorage.getItem(STORAGE_KEY);
-      setHomeLocale(saved === "en" ? "en" : "zh");
-    };
-
-    syncLocale();
-    window.addEventListener("storage", syncLocale);
-    window.addEventListener("home-locale-change", syncLocale);
-    return () => {
-      window.removeEventListener("storage", syncLocale);
-      window.removeEventListener("home-locale-change", syncLocale);
-    };
-  }, []);
 
   const currentNavItems = useMemo(() => {
     if (!isHome || homeLocale === "zh") {
@@ -51,7 +32,7 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-50 pt-4 sm:pt-5">
       <Container className="relative">
         <div className="liquid-glass mx-auto flex max-w-5xl items-center rounded-full border border-white/55 px-2.5 py-2.5 text-sm text-ink shadow-[var(--shadow-lg)]">
-          <Link href="/" className="shrink-0 rounded-full bg-white/72 px-4 py-2 font-heading text-lg font-extrabold tracking-tight text-ink">
+          <Link href={isHome && homeLocale === "en" ? "/?lang=en" : "/"} className="shrink-0 rounded-full bg-white/72 px-4 py-2 font-heading text-lg font-extrabold tracking-tight text-ink">
             MyWeb
           </Link>
 
