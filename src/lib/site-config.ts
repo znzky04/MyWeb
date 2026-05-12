@@ -13,7 +13,7 @@ export const notesCategories: NotesCategory[] = [
     slug: "life",
     title: "日记随笔",
     subtitle: "Daily writing",
-    description: "记录生活里的小念头、临时心情和一些值得留住的时刻。",
+    description: "记录生活里的小念头、临时心情和一些值得留下来的时刻。",
     accent: "from-accent-pink/30 to-accent-yellow/20",
   },
   {
@@ -21,7 +21,7 @@ export const notesCategories: NotesCategory[] = [
     slug: "study",
     title: "学习笔记",
     subtitle: "Study notes",
-    description: "整理前端、开发、工具和学习过程中的重点收获。",
+    description: "整理前端、开发、工具和学习过程中得到的重点收获。",
     accent: "from-accent/30 to-accent-mint/20",
   },
   {
