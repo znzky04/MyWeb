@@ -28,7 +28,7 @@ export function NotesList({
           <NoteCard key={`${note.category}-${note.slug}`} note={note} index={index} category={category} />
         ))}
         {filtered.length === 0 ? (
-          <div className="notes-panel hud-frame rounded-[28px] px-5 py-12 text-center text-sm leading-7 text-white/70">
+          <div className="notes-panel hud-frame vn-stars rounded-[28px] px-5 py-12 text-center text-sm leading-7 text-ink-soft">
             当前没有匹配的标题，可以换个关键词试试。
           </div>
         ) : null}
