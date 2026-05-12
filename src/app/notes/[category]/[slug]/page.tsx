@@ -30,7 +30,7 @@ export default async function NoteDetailPage({ params }: NoteDetailPageProps) {
   return (
     <SiteShell>
       <Container className="py-10 sm:py-14">
-        <NoteDetail note={note} categoryTitle={categoryInfo.title} />
+        <NoteDetail note={note} categoryInfo={categoryInfo} />
       </Container>
     </SiteShell>
   );

@@ -128,11 +128,55 @@ img {
   box-shadow: var(--shadow-md);
 }
 
+.hud-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.hud-frame::before,
+.hud-frame::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 22px;
+  pointer-events: none;
+}
+
+.hud-frame::before {
+  inset: 12px;
+  opacity: 0.38;
+}
+
+.hud-frame::after {
+  inset: auto 14px 14px auto;
+  width: 78px;
+  height: 78px;
+  opacity: 0.24;
+}
+
 .soft-grid {
   background-image:
     linear-gradient(rgba(113, 137, 198, 0.09) 1px, transparent 1px),
     linear-gradient(90deg, rgba(113, 137, 198, 0.09) 1px, transparent 1px);
   background-size: 22px 22px;
+}
+
+.scanline-soft {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.08) 0,
+    rgba(255, 255, 255, 0.08) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+  background-size: 100% 12px;
+}
+
+.notes-orbit {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 216, 240, 0.36), transparent 26%),
+    radial-gradient(circle at 82% 18%, rgba(197, 233, 255, 0.34), transparent 26%),
+    radial-gradient(circle at 50% 88%, rgba(217, 255, 236, 0.22), transparent 22%);
 }
 
 .ambient-mask {

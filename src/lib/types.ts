@@ -32,6 +32,10 @@ export type NotesCategory = {
   subtitle: string;
   description: string;
   accent: string;
+  roomLabel: string;
+  roomCode: string;
+  signal: string;
+  atmosphere: string;
 };
 
 export type ProfileContent = {
