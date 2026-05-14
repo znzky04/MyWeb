@@ -71,16 +71,16 @@ export const homeContent: Record<HomeLocale, HomeCopy> = {
   zh: {
     profile: {
       name: "周恩泽",
-      identity: "信息与计算科学专业学生 / 前端与游戏交互爱好者 / 正在探索 AI 与内容生成",
+      identity: "信息与计算科学专业学生 / 关注游戏、音频与 AI 的实践表达",
       intro:
-        "我目前就读于西交利物浦大学信息与计算科学专业，主要关注前端交互、游戏开发、3D 角色表现，以及大语言模型在内容生成和教育场景里的实际应用。",
+        "我目前就读于西交利物浦大学信息与计算科学专业，主要关注游戏开发、音频相关内容，以及人工智能在创作和交互体验中的实际应用。",
       detail:
-        "这个网站会用来整理我的项目、研究经历和成长轨迹，也会保留一块记录日常灵感、学习笔记、游戏体验和追番感受的空间。",
-      keywords: ["AI 应用", "前端交互", "游戏开发", "3D 动画", "内容生成"],
+        "这个网站会用来整理我的项目、研究经历和成长轨迹，也会留出一块记录日常灵感、学习笔记，以及对动漫和游戏的一些感受与想法的空间。",
+      keywords: ["游戏开发", "音频表达", "AI 应用", "交互体验", "内容创作"],
       longBio: [
-        "我希望把技术能力和创意表达结合起来，做出既有实现深度、又有体验感的作品，而不只是完成功能。",
-        "目前我比较关注的方向包括大语言模型工作流、语音与角色表现、教育内容工具，以及更有沉浸感的交互式页面设计。",
-        "除了项目和研究，我也喜欢通过游戏、动画和个人记录来积累灵感，把零散兴趣慢慢沉淀成能长期继续扩展的作品。",
+        "我希望把技术能力和创作表达结合起来，做出既有实现深度，也有体验感的作品，而不只是把功能拼起来。",
+        "目前我更关注游戏、声音、角色表现和 AI 相关尝试，也会自然地被动漫、游戏和小说里的叙事氛围吸引。",
+        "除了项目和研究，我也想把那些平时零散积累下来的兴趣、感受和灵感慢慢收进来，让这个网站变成一个可以长期继续长大的个人空间。",
       ],
       socialLinks: [
         { label: "GitHub", href: "https://github.com/znzky04" },
@@ -97,13 +97,13 @@ export const homeContent: Record<HomeLocale, HomeCopy> = {
           year: "2025",
           title: "苏州百智通信息科技有限公司实习",
           description:
-            "参与教育视频场景下的 LLM 工作流设计与落地，使用 Dify 构建字幕切分、笔记生成、适龄总结和课程内容分析等功能，并接入实际教育平台。",
+            "参与 LLM 工作流设计与落地，使用 Dify 构建字幕切分、笔记生成、内容总结与知识整理等功能，积累了把 AI 能力接入真实产品的实践经验。",
         },
         {
           year: "2024 - 2025",
           title: "从科研与 Game Jam 中持续积累项目经验",
           description:
-            "做过基于深度学习的音频源分离研究，也参加过 itch.io Game Jam，负责叙事、事件系统、UI 以及音效实现，逐步把兴趣变成真正可展示的作品。",
+            "做过基于深度学习的音频源分离研究，也参加过 itch.io Game Jam，负责叙事、事件系统、UI 以及音乐音效实现，逐步把兴趣变成真正可展示的作品。",
         },
       ],
     },
@@ -114,14 +114,16 @@ export const homeContent: Record<HomeLocale, HomeCopy> = {
       visualLabel: "首页主视觉",
       musicLabel: "背景音乐",
       replaceLabel: "后续可替换",
-      replaceText: "这里之后可以替换成你喜欢的插画、角色图，或者更贴近你风格的主页主视觉。",
+      replaceText: "这里之后可以替换成你喜欢的插画、角色图，或者更贴近你个人风格的首页主视觉。",
       moodLabel: "当前氛围",
-      moodText: "希望主页保持清新、明亮，同时保留一点舞台感和个人气质。",
-      sceneLabel: "场景提示",
-      sceneTitle: "云层、草坡和光感，会继续慢慢长成更完整的首页场景。",
-      sceneText: "这一版先用轻盈的自然场景撑起氛围，后面还可以继续补海边、樱花、夜景灯光等更贴近你个人风格的视觉素材。",
-      sideMood: "明亮 / 青春 / 可持续更新",
-      sideText: "等你把自己的配图和音乐换进去之后，这里会更像真正属于你的首页封面。",
+      moodText: "希望主页保持明亮、轻盈，同时也带一点属于自己的舞台感。",
+      sceneLabel: "兴趣坐标",
+      sceneTitle: "这里会慢慢收进我真正长期在意的内容和方向。",
+      sceneText:
+        "游戏开发、音频相关尝试、AI 项目，以及平时从动漫、游戏和小说里得到的灵感，之后都会一点点被整理进来。它不只是简历主页，也会慢慢变成更完整的个人作品空间。",
+      sideMood: "游戏 / 音频 / AI / 持续更新",
+      sideText:
+        "我希望这里既能放比较正式的项目和经历，也能保留一点故事感、角色感和声音氛围，让它看起来更像我自己。",
     },
     intro: {
       eyebrow: "关于我",
@@ -150,11 +152,11 @@ export const homeContent: Record<HomeLocale, HomeCopy> = {
           status: "研究项目",
         },
         {
-          name: "教育视频场景下的 LLM 工作流搭建",
+          name: "基于 LLM 的内容工作流搭建",
           summary:
-            "在苏州百智通实习期间，我参与设计并落地多个基于 Dify 的教育内容工作流，帮助中小学视频内容变得更易用、可导航、可总结。",
-          stack: ["Dify", "LLM Workflow", "Prompt Design", "Education Tech"],
-          highlight: "包括字幕切分、笔记生成、适龄总结、知识点映射、内容推荐和视频内导航等功能，并接入实际平台使用。",
+            "在苏州百智通实习期间，我参与设计并落地多个基于 Dify 的内容工作流，围绕字幕整理、知识提炼和内容分析等方向进行实践。",
+          stack: ["Dify", "LLM Workflow", "Prompt Design", "Content Systems"],
+          highlight: "这段经历让我更熟悉如何把大模型能力和真实使用场景结合起来，而不只是停留在演示层面。",
           status: "实习项目",
         },
         {
@@ -171,7 +173,7 @@ export const homeContent: Record<HomeLocale, HomeCopy> = {
     timeline: {
       eyebrow: "成长轨迹",
       title: "比简历更轻一点，但能看见我现在真正往哪走。",
-      description: "这里挑出最关键的几段经历，用来说明我目前的关注方向：AI 应用、角色表现、教育内容工具和交互体验设计。",
+      description: "这里挑出最关键的几段经历，用来说明我目前更稳定在积累的方向：游戏、声音、AI 应用，以及交互体验设计。",
     },
     notesTeaser: {
       eyebrow: "记录空间",
@@ -197,16 +199,16 @@ export const homeContent: Record<HomeLocale, HomeCopy> = {
   en: {
     profile: {
       name: "Enze Zhou",
-      identity: "Information and Computing Science Student / Frontend and Game Interaction Enthusiast / Exploring AI and Content Generation",
+      identity: "Information and Computing Science Student / Focused on Games, Audio, and Applied AI",
       intro:
-        "I am currently studying Information and Computing Science at Xi'an Jiaotong-Liverpool University. My interests include frontend interaction, game development, 3D character performance, and practical applications of large language models in content generation and education.",
+        "I am currently studying Information and Computing Science at Xi'an Jiaotong-Liverpool University. My main interests are game development, audio-related work, and practical applications of AI in creative and interactive experiences.",
       detail:
-        "This website is where I organize my projects, research experiences, and growth over time, while also keeping a more personal space for daily ideas, study notes, game impressions, and anime thoughts.",
-      keywords: ["AI Applications", "Frontend Interaction", "Game Development", "3D Animation", "Content Generation"],
+        "This website is where I organize my projects, research experiences, and growth over time, while also keeping a more personal space for ideas, study notes, and occasional thoughts inspired by anime and games.",
+      keywords: ["Game Development", "Audio", "Applied AI", "Interaction Design", "Creative Work"],
       longBio: [
-        "I want to combine technical depth with creative expression and build work that feels thoughtful, polished, and genuinely enjoyable to experience.",
-        "Right now, I am especially interested in LLM workflows, speech and character expression, educational content tools, and immersive interface design.",
-        "Beyond formal projects and research, I also like collecting inspiration through games, animation, and personal notes, then slowly turning those scattered interests into long-term work.",
+        "I want to combine technical depth with creative expression and build work that feels thoughtful, polished, and enjoyable to experience.",
+        "Right now, I am especially drawn to games, sound, character expression, and hands-on AI experiments, along with the kinds of atmosphere and storytelling I absorb from animation, games, and fiction.",
+        "Beyond formal projects and research, I also want this site to grow into a long-term personal space that can hold scattered interests, notes, and ideas in a more complete way.",
       ],
       socialLinks: [
         { label: "GitHub", href: "https://github.com/znzky04" },
@@ -223,13 +225,13 @@ export const homeContent: Record<HomeLocale, HomeCopy> = {
           year: "2025",
           title: "Internship at Suzhou Baizhitong Information Technology",
           description:
-            "Worked on LLM workflow design for educational video scenarios, using Dify to support subtitle segmentation, note generation, age-appropriate summaries, and curriculum-aware analysis.",
+            "Worked on LLM workflow design and deployment, using Dify to build features for subtitle structuring, note generation, content summarization, and knowledge organization.",
         },
         {
           year: "2024 - 2025",
           title: "Growing Through Research and Game Jam Projects",
           description:
-            "From deep learning-based audio source separation research to a ranked indie game jam project, I have been building experience through hands-on systems, storytelling, UI, and interaction work.",
+            "From deep learning-based audio source separation research to a ranked indie game jam project, I have been building experience through hands-on systems, storytelling, UI, and sound-related work.",
         },
       ],
     },
@@ -242,12 +244,14 @@ export const homeContent: Record<HomeLocale, HomeCopy> = {
       replaceLabel: "Replace later",
       replaceText: "This area can later be replaced with your own illustration, character art, or a homepage visual that feels more personal.",
       moodLabel: "Current mood",
-      moodText: "I want the homepage to stay bright, clean, and gently theatrical at the same time.",
-      sceneLabel: "Scene note",
-      sceneTitle: "Clouds, meadow light, and soft atmosphere can gradually grow into a fuller homepage world.",
-      sceneText: "This version uses light natural scenery as a visual base. Later it can evolve with seaside shots, cherry blossom scenes, or night lights that feel more personal.",
-      sideMood: "Bright / youthful / easy to keep updating",
-      sideText: "Once your own visuals and music are swapped in, this page will feel much more like a true personal cover.",
+      moodText: "I want the homepage to stay bright, light, and still carry a bit of personal stage presence.",
+      sceneLabel: "Interest map",
+      sceneTitle: "This space will gradually gather the things I care about most over time.",
+      sceneText:
+        "Game development, audio experiments, AI projects, and the inspiration I pick up from animation, games, and fiction will all slowly find a place here. It is more than a resume page. I want it to grow into a fuller personal body of work.",
+      sideMood: "Games / Audio / AI / Ongoing updates",
+      sideText:
+        "I want this site to hold more formal projects and experiences while still keeping a bit of story, character, and sonic atmosphere so it feels recognizably mine.",
     },
     intro: {
       eyebrow: "About me",
@@ -276,11 +280,11 @@ export const homeContent: Record<HomeLocale, HomeCopy> = {
           status: "Research project",
         },
         {
-          name: "LLM Workflows for Educational Video Scenarios",
+          name: "LLM-Based Content Workflow Design",
           summary:
-            "During my internship at Suzhou Baizhitong, I helped design and deploy multiple Dify-based workflows that made educational videos easier to navigate, summarize, and study from.",
-          stack: ["Dify", "LLM Workflow", "Prompt Design", "Education Tech"],
-          highlight: "These workflows included subtitle segmentation, note generation, age-adapted summaries, concept mapping, recommendations, and in-video navigation.",
+            "During my internship at Suzhou Baizhitong, I helped design and implement several Dify-based content workflows focused on subtitle structuring, knowledge extraction, and content analysis.",
+          stack: ["Dify", "LLM Workflow", "Prompt Design", "Content Systems"],
+          highlight: "This experience helped me understand how to turn model capabilities into workflows that are actually useful in real product contexts.",
           status: "Internship project",
         },
         {
@@ -297,7 +301,7 @@ export const homeContent: Record<HomeLocale, HomeCopy> = {
     timeline: {
       eyebrow: "Growth timeline",
       title: "Lighter than a resume, but clearer about the direction I am actually moving toward.",
-      description: "These moments highlight the areas I care about most right now: AI applications, character expression, educational tools, and interaction design.",
+      description: "These moments highlight the areas I keep returning to most: games, sound, applied AI, and interaction design.",
     },
     notesTeaser: {
       eyebrow: "Notes space",
